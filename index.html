@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hangout? 😺</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page 1: Greeting -->
+  <section class="page" id="page-1">
+    <img src="cat-greeting.png" alt="Cute Cat" class="cat-img">
+    <h1>Hi Kiddo!! Hehe</h1>
+    <button class="next-btn" onclick="goToPage(2)">Meow Next</button>
+  </section>
+
+  <!-- Page 2: Hangout Question -->
+  <section class="page" id="page-2">
+    <img src="https://media.tenor.com/9yQWc7wS0pIAAAAi/cute-cat.gif" alt="Cute Cat" class="cat-img">
+    <h2>Do you want to hangout with me during Saturday 23/8?</h2>
+    <div class="options">
+      <button class="yes-btn" onclick="handleYes()">Yes, I do</button>
+      <button class="no-btn" id="noBtn" onclick="handleNo()">No, leave me alone</button>
+    </div>
+  </section>
+
+  <!-- Page 3: Place Selection -->
+  <section class="page" id="page-3">
+    <img src="https://media.tenor.com/9yQWc7wS0pIAAAAi/cute-cat.gif" alt="Cute Cat" class="cat-img small">
+    <h2>Choose any of the below places as a starter place to meet up:</h2>
+    <div class="places">
+      <div class="place-card" onclick="selectPlace('Midvalley', 'https://media.tenor.com/jr4B0gB7YIQAAAAi/doctor-cute.gif')">
+        <img src="https://media.tenor.com/jr4B0gB7YIQAAAAi/doctor-cute.gif" alt="Midvalley Blood Donation">
+        <span>Midvalley (Blood Donation)</span>
+      </div>
+      <div class="place-card" onclick="selectPlace('TRX', 'trx.jpg')">
+        <img src="trx.jpg" alt="TRX">
+        <span>TRX</span>
+      </div>
+      <div class="place-card" onclick="selectPlace('99 Wonderland Park', 'wonderland.jpg')">
+        <img src="wonderland.jpg" alt="99 Wonderland Park">
+        <span>99 Wonderland Park</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 4: Summary / Invitation -->
+  <section class="page" id="page-4">
+    <img src="https://media.giphy.com/media/1xVctDJbQyG5y/giphy.gif" alt="Jumping Cat" class="cat-img small">
+    <div class="invitation-card">
+      <h2>You're Invited!</h2>
+      <p>Hi Kiddo!<br>
+      Let's hangout on <b>Saturday, 23/8</b> at:</p>
+      <div id="chosenPlace"></div>
+      <p class="screenshot-msg">
+        Please screenshot this and send to the owner hehe<br>
+        (I didn't have so much money to create a cloud for website hahaha)<br>
+        <b>See you there!</b> 🥰
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
